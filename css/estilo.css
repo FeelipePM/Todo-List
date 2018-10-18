@@ -1,0 +1,112 @@
+:root {
+  --color-button: #6A0888;
+  --color-button-light: rgba(106, 8, 136, 0.7);
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+
+button {
+  border-radius: 5px;
+  display: block;
+  margin: 0px 20px 5px 20px;
+  height: 30px;
+}
+
+#login {
+  background-color: var(--color-button);
+  margin-top: 60px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#login:hover {
+  background-color: var(--color-button-light);
+}
+
+#criar-cadastro {
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: var(--color-button);
+}
+
+#criar-cadastro:hover {
+  background-color: var(--color-button-light);
+}
+
+form{
+  display: flex;
+  margin: 10px;
+}
+
+.login-usuario {
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.card-channel {
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.09);
+  text-align: center;
+  width: 400px;
+  height: 460px;
+  flex-grow: 1;
+}
+
+.recuperar-senha {
+  color: gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.login {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 50px; 
+}
+
+.titulo {
+  text-align: center;
+  font-size: 80px;
+  color: var(--color-button);
+  text-transform: uppercase;
+}
+
+.titulo-part2 {
+  color: #FFF;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 0px var(--color-button), 
+  -1px 0px 0px var(--color-button), 
+  0px 1px 0px var(--color-button), 
+  0px -1px 0px var(--color-button);
+  font-size: 80px;
+  font-weight: bold;
+}
+
+section {
+  margin: 0 auto;
+}
