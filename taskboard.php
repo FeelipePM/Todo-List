@@ -32,33 +32,21 @@
       </form>
       <section class="tarefas">
         <ul>
+          <?php
+            //for para carregar a lista
+          ?>
           <hr class="linha">
-          <li>
-            <input class="checkbox" onclick="tarefaConcluida()" type="checkbox">
-            Vue.Js
+          <li class="item">
+            <label for="atividade">Vue.Js</label>
+            <input class="checkbox" type="checkbox" name="atividade">
+            <a href="deletar?id=<?'a'?>" class="deletar">Deletar</a>
           </li>
-          <hr class="linha">
-          <li>
-            <input class="checkbox" type="checkbox">
-            Finalizar Trabalho da Faculdade
-          </li>
-          <hr class="linha">
-          <li>
-            <input class="checkbox" type="checkbox">
-            Iniciar UX Design
-          </li>
-          <hr class="linha">
-          <li>
-            <input class="checkbox" type="checkbox">
-            Cria Banco de dados
-          </li>
-          <hr class="linha">
+          <?php?>
         </ul>
       </section>
 
     </div>
   </section>
-  <script src="js/login.js"></script>
 </body>
 
 </html>

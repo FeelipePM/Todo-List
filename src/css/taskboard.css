@@ -153,4 +153,21 @@ section {
 .checkbox {
   width: 20px;
   height: 20px;
+  text-align: center;
+}
+
+.deletar{
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.item{
+  text-align: right;
+}
+
+.item input, label{
+  
 }
