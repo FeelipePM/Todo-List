@@ -11,7 +11,7 @@ class Usuario
  public function __construct(String $nome, String $sobrenome, String $email)
  {
   if ($nome == "" || $nome == null || $sobrenome == "" || $sobrenome == null || $email == "" || $email == null) {
-   throw err("Todos os campos são necessario");
+   throw new Exception("Todos os campos são necessario");
   }
 
   $this->nome      = $nome;
