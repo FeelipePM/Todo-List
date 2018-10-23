@@ -1,0 +1,83 @@
+create database todolist;
+
+use todolist;
+
+create table Usuario
+(
+	idUsuario bigint auto_increment primary key,
+	nome varchar(70) not null,
+    sobrenome varchar(70) not null,
+    email varchar(100) unique not null,
+    senha varchar(100) null,
+    ativo bit,
+    dtCadastro datetime not null,
+    foto varchar(150) null,
+    urlConfirmarEmail varchar(200) null,
+    urlAlterarSenha varchar(200) null
+)Engine=InnoDB;
+
+create table Amigo 
+(
+	idAmigo bigint primary key auto_increment,
+    idUsuario bigint not null
+)Engine=InnoDB;
+
+-- Adiciona data estrangeira
+alter table Amigo add constraint FK_Amigo_Usuario foreign key (idUsuario) references Usuario(idUsuario);
+
+create table Tarefa
+(
+	idTarefa bigint primary key auto_increment,
+    nome varchar(70) not null,
+    descricao text,
+    dtCriacao datetime not null,
+    dtEntrega datetime not null,
+    idUsuario bigint not null,
+    idTarefaTipo int not null,
+    idTarefaStatus int not null
+)Engine=InnoDB;
+
+-- Pessoal ou compartilhada
+create table TarefaTipo
+(
+	idTarefaTipo int primary key auto_increment,
+    descricao varchar(40)
+)Engine=InnoDB;
+
+-- Ativa, Arquivada, Vencida
+create table TarefaStatus
+(
+	idTarefaStatus int primary key auto_increment,
+    descricao varchar(40)
+)Engine=InnoDB;
+
+alter table Tarefa add constraint FK_Tarefa_TarefaTipo foreign key (idTarefaTipo) references TarefaTipo(idTarefaTipo);
+alter table Tarefa add constraint FK_Tarefa_TarefaStatus foreign key (idTarefaStatus) references TarefaStatus(idTarefaStatus);
+
+create table TarefaCheckList
+(
+	idTarefaCheckList bigint primary key auto_increment,
+    idTarefa bigint not null,
+    descricao text not null
+)Engine=InnoDB;
+
+alter table TarefaCheckList add constraint FK_TarefaCheckList_TarefaTipo foreign key (idTarefa) references Tarefa(idTarefa);
+
+create table TarefaCompartilhada
+(
+	idTarefaCompartilhada bigint primary key auto_increment,
+    idTarefa bigint not null
+)Engine=InnoDB;
+
+create table TarefaCompartilhadaAmigo
+(
+	idTarefaCompartilhadaAmigo bigint primary key auto_increment,
+    idAmigo bigint not null
+)Engine=InnoDB;
+
+alter table TarefaCompartilhada add constraint FK_TarefaCompartilhada_Tarefa foreign key (idTarefa) references Tarefa(idTarefa);
+alter table TarefaCompartilhadaAmigo add constraint FK_TarefaCompartilhadaAmigo_Amigo foreign key (idAmigo) references Amigo(idAmigo);
+
+
+insert into TarefaTipo (descricao) values ('Pessoal'), ('Compartilhada');
+insert into TarefaStatus(descricao) values ('Pendente'),('Concluída'), ('Vencida');
