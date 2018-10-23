@@ -32,10 +32,12 @@ button {
   background-color: var(--color-button);
   margin-top: 60px;
   font-weight: 500;
+  margin: 60px 20px 10px 150px;
   border: none;
   border-radius: 5px;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #login:hover {
@@ -86,7 +88,8 @@ form{
 .login {
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
+  padding: 10px;  
 }
 
 .titulo {

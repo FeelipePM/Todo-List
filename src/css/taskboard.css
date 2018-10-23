@@ -156,18 +156,21 @@ section {
   text-align: center;
 }
 
-.deletar{
-  text-decoration: none;
-  color: white;
-  background-color: red;
-  padding: 10px;
-  border-radius: 30px;
+.icone-editar {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 5px;
+  order: 1;
 }
 
-.item{
-  text-align: right;
+.icone-lixeira {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.item input, label{
-  
+#icones {
+float: right;
 }
