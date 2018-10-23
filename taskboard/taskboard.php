@@ -20,17 +20,17 @@
           ?>
           <hr class="linha">
           <li class="item">
+          <input class="checkbox" type="checkbox" name="atividade">
             <label for="atividade">Estudar Vue.Js</label>
-            <input class="checkbox" type="checkbox" name="atividade">
-            <img src="../src/img/editar.png" alt="icone-editar" id="icones" class="icone-editar">
             <img src="../src/img/iconlixeira.png" alt="icone-lixeira" id="icones" class="icone-lixeira">
+            <img src="../src/img/editar.png" alt="icone-editar" id="icones" class="icone-editar">
           </li>
           <hr class="linha">
           <li class="item">
+          <input class="checkbox" type="checkbox" name="atividade">
             <label for="atividade">Finalizar Commit</label>
-            <input class="checkbox" type="checkbox" name="atividade">
-            <img src="../src/img/editar.png" alt="icone-editar" id="icones" class="icone-editar">
             <img src="../src/img/iconlixeira.png" alt="icone-lixeira" id="icones" class="icone-lixeira">
+            <img src="../src/img/editar.png" alt="icone-editar" id="icones" class="icone-editar">
           </li>
           <hr class="linha">
         </ul>
