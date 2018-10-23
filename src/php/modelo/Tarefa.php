@@ -8,15 +8,18 @@ class Tarefa
  private $descricao;
  private $dataLimite;
  private $dataCriacao;
+ private $status;
 
- public function __construct($titulo, $descricao, $dataLimite)
+ public function __construct(String $titulo, String $descricao, $dataLimite='0000-00-00')
  {
   date_default_timezone_set('America/Sao_Paulo');
+  $date              = new DateTime($dataLimite);
+  
   $this->titulo      = $titulo;
   $this->descricao   = $descricao;
-  $date              = new DateTime($dataLimite);
   $this->dataLimite  = $date->format('Y-m-d H:i');
   $this->dataCriacao = date('Y-m-d H:i');
+  $this->status = 1; // 1 - ativo; 2 - vai expirar; 3 - atrasado; 
  }
 
  public function getIdTarefa()
@@ -67,6 +70,15 @@ class Tarefa
  public function setDataCriacao(String $dataCriacao)
  {
   $this->dataCriacao = $dataCriacao;
+ }
+ public function getStatus()
+ {
+  return $this->status;
+ }
+
+ public function setStatus(int $status)
+ {
+  $this->status = $status;
  }
 
 }
