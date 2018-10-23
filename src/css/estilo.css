@@ -1,6 +1,7 @@
 :root {
   --color-button: #6A0888;
   --color-button-light: rgba(106, 8, 136, 0.7);
+  --color-white: #FFF;
 }
 
 html, body {
@@ -21,14 +22,7 @@ input {
   padding: 5px;
 }
 
-button {
-  border-radius: 5px;
-  display: block;
-  margin: 0px 20px 5px 20px;
-  height: 30px;
-}
-
-#login {
+/* #login {
   background-color: var(--color-button);
   margin-top: 60px;
   font-weight: 500;
@@ -38,7 +32,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-}
+} */
 
 #login:hover {
   background-color: var(--color-button-light);
@@ -78,11 +72,12 @@ form{
 }
 
 .recuperar-senha {
+  display: block;
   color: gray;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
-  margin: 20px;
+  margin: 10px;
 }
 
 .login {
@@ -112,4 +107,52 @@ form{
 
 section {
   margin: 0 auto;
+}
+
+#botao-recuperar {
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  height: 30px;
+  text-align: center;
+  margin: 120px 60px 0px 60px;
+}
+
+#botao-cadastrar {
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  height: 30px;
+  text-align: center;
+  margin: 60px 60px 0px 60px;
+  cursor: pointer;
+}
+
+#botao-login {
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  height: 30px;
+  text-align: center;
+  margin: 60px 60px 0px 60px;
+  cursor: pointer;
+}
+
+#botao-cadastre-se {
+  background-color: var(--color-button);
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+  margin: 10px 60px 0px 60px;
+  padding: 7px;
+  cursor: pointer;
 }
